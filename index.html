@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en">
 
 <head>
@@ -6,10 +7,9 @@
 <meta charset="UTF-8">
 
 <meta name="viewport"
-      content="width=device-width, initial-scale=1.0">
+   content="width=device-width, initial-scale=1.0">
 
 <title>25 Years & Still Counting ❤️</title>
-
 
 <style>
 
@@ -28,16 +28,9 @@ html {
 }
 
 body {
-
     background: #faf7f2;
-
     color: #302824;
-
-    font-family:
-        Georgia,
-        "Times New Roman",
-        serif;
-
+    font-family: Georgia, "Times New Roman", serif;
     overflow-x: hidden;
 }
 
@@ -47,61 +40,37 @@ body {
 ========================================================= */
 
 .screen {
-
     min-height: 100vh;
-
     display: none;
-
     align-items: center;
-
     justify-content: center;
-
     padding: 40px 20px;
-
     text-align: center;
-
 }
 
 .screen.active {
-
     display: flex;
-
-    animation:
-        appear 0.7s ease;
-
+    animation: appear 0.7s ease;
 }
 
 @keyframes appear {
 
     from {
-
         opacity: 0;
-
-        transform:
-            translateY(20px);
-
+        transform: translateY(20px);
     }
 
     to {
-
         opacity: 1;
-
-        transform:
-            translateY(0);
-
+        transform: translateY(0);
     }
 
 }
 
-
 .container {
-
     width: 100%;
-
     max-width: 650px;
-
     margin: auto;
-
 }
 
 
@@ -111,91 +80,53 @@ body {
 
 .eyebrow {
 
-    font-family:
-        Arial,
-        sans-serif;
-
+    font-family: Arial, sans-serif;
     font-size: 10px;
-
     letter-spacing: 4px;
-
     text-transform: uppercase;
-
     color: #b79a5a;
-
     margin-bottom: 20px;
 
 }
 
-
 h1,
 h2 {
-
     font-weight: 400;
-
 }
-
 
 h1 {
 
-    font-size:
-        clamp(
-            60px,
-            14vw,
-            105px
-        );
-
+    font-size: clamp(60px, 14vw, 105px);
     line-height: 0.82;
 
 }
 
-
 h2 {
 
-    font-size:
-        clamp(
-            48px,
-            11vw,
-            75px
-        );
-
+    font-size: clamp(48px, 11vw, 75px);
     line-height: 0.88;
 
 }
 
-
 .italic {
-
     font-style: italic;
-
 }
-
 
 .subtitle {
 
     margin-top: 30px;
-
     font-size: 27px;
-
     line-height: 1.25;
 
 }
 
-
 .description {
 
     margin: 20px auto 0;
-
     max-width: 500px;
-
-    font-family:
-        Arial,
-        sans-serif;
-
+    font-family: Arial, sans-serif;
     font-size: 14px;
-
     line-height: 1.8;
-
     color: #756c66;
 
 }
@@ -208,26 +139,16 @@ h2 {
 .heart {
 
     margin: 25px 0;
-
     font-size: 35px;
-
     color: #873b47;
-
-    animation:
-        heartbeat
-        2s
-        infinite;
+    animation: heartbeat 2s infinite;
 
 }
-
 
 @keyframes heartbeat {
 
     50% {
-
-        transform:
-            scale(1.15);
-
+        transform: scale(1.15);
     }
 
 }
@@ -240,44 +161,29 @@ h2 {
 .primary-btn {
 
     margin-top: 35px;
-
     padding: 15px 28px;
-
     border: none;
-
     border-radius: 50px;
-
     background: #873b47;
-
     color: white;
-
     font-family: Arial, sans-serif;
-
     font-size: 13px;
-
     cursor: pointer;
-
     transition: 0.25s;
 
 }
 
-
 .primary-btn:hover {
 
     background: #682c36;
-
-    transform:
-        translateY(-2px);
+    transform: translateY(-2px);
 
 }
-
 
 .primary-btn:disabled {
 
     opacity: 0.35;
-
     cursor: not-allowed;
-
     transform: none;
 
 }
@@ -289,42 +195,28 @@ h2 {
 
 .memory-wrapper {
 
-    margin:
-        35px auto 0;
-
+    margin: 35px auto 0;
     max-width: 470px;
 
 }
 
-
 .memory-image-container {
 
     overflow: hidden;
-
     border-radius: 22px;
-
     background: #eee5dc;
 
     box-shadow:
         0 20px 50px
-        rgba(
-            48,
-            40,
-            36,
-            0.15
-        );
+        rgba(48, 40, 36, 0.15);
 
 }
-
 
 .memory-image {
 
     width: 100%;
-
     aspect-ratio: 4 / 5;
-
     object-fit: cover;
-
     display: block;
 
     transition:
@@ -333,107 +225,73 @@ h2 {
 
 }
 
-
 .memory-image.fade {
 
     opacity: 0;
-
-    transform:
-        scale(1.03);
+    transform: scale(1.03);
 
 }
-
 
 .memory-caption {
 
     margin-top: 18px;
-
     font-size: 29px;
 
 }
 
-
 .memory-counter {
 
     margin-top: 7px;
-
     font-family: Arial, sans-serif;
-
     font-size: 10px;
-
     letter-spacing: 2px;
-
     color: #b79a5a;
 
 }
 
-
 .carousel-controls {
 
     display: flex;
-
     align-items: center;
-
     justify-content: center;
-
     gap: 25px;
-
     margin-top: 20px;
 
 }
 
-
 .carousel-arrow {
 
     width: 42px;
-
     height: 42px;
-
     border-radius: 50%;
-
-    border:
-        1px solid
-        #e3d8ce;
-
+    border: 1px solid #e3d8ce;
     background: transparent;
-
     font-size: 25px;
-
     cursor: pointer;
 
 }
-
 
 .dots {
 
     display: flex;
-
     gap: 7px;
 
 }
 
-
 .dot {
 
     width: 6px;
-
     height: 6px;
-
     border-radius: 50%;
-
     background: #ddd0c5;
-
     cursor: pointer;
 
 }
 
-
 .dot.active {
 
     background: #873b47;
-
-    transform:
-        scale(1.4);
+    transform: scale(1.4);
 
 }
 
@@ -445,144 +303,102 @@ h2 {
 .selection-grid {
 
     display: grid;
-
-    grid-template-columns:
-        1fr;
-
+    grid-template-columns: 1fr;
     gap: 12px;
-
     margin-top: 30px;
 
 }
 
-
 .selection-card {
 
     width: 100%;
-
     padding: 18px;
 
     border:
-        1px solid
-        #e3d8ce;
+        1px solid #e3d8ce;
 
     border-radius: 17px;
 
     background:
-        rgba(
-            255,
-            255,
-            255,
-            0.5
-        );
+        rgba(255, 255, 255, 0.5);
 
     text-align: left;
-
     cursor: pointer;
-
     transition: 0.25s;
-
     color: #302824;
 
 }
 
-
 .selection-card:hover {
 
     background: white;
-
     border-color: #b79a5a;
+    transform: translateY(-2px);
 
 }
-
 
 .selection-card.selected {
 
     background: #873b47;
-
     color: white;
-
     border-color: #873b47;
 
 }
 
-
 .card-top {
 
     display: flex;
-
     align-items: center;
-
-    justify-content:
-        space-between;
+    justify-content: space-between;
 
 }
-
 
 .day {
 
     font-family: Arial, sans-serif;
-
     font-size: 10px;
-
     letter-spacing: 2px;
-
     text-transform: uppercase;
-
     opacity: 0.65;
 
 }
-
 
 .date {
 
     font-size: 30px;
-
     margin-top: 3px;
 
 }
 
-
 .card-description {
 
     margin-top: 5px;
-
     font-family: Arial, sans-serif;
-
     font-size: 11px;
-
     opacity: 0.65;
 
 }
 
-
 .check {
 
     width: 24px;
-
     height: 24px;
 
     border:
-        1px solid
-        currentColor;
+        1px solid currentColor;
 
     border-radius: 50%;
 
     display: flex;
-
     align-items: center;
-
     justify-content: center;
 
     opacity: 0.4;
 
 }
 
-
 .selected .check {
-
     opacity: 1;
-
 }
 
 
@@ -593,170 +409,119 @@ h2 {
 .destination-card {
 
     display: flex;
-
     align-items: center;
-
     gap: 15px;
 
 }
 
-
 .destination-icon {
 
     width: 48px;
-
     height: 48px;
-
     flex-shrink: 0;
 
     border-radius: 50%;
-
     background: #f1e7dd;
 
     display: flex;
-
     align-items: center;
-
     justify-content: center;
 
     font-family: Arial, sans-serif;
-
     font-size: 22px;
 
 }
 
-
 .selected .destination-icon {
 
     background:
-        rgba(
-            255,
-            255,
-            255,
-            0.15
-        );
+        rgba(255, 255, 255, 0.15);
 
 }
-
 
 .destination-info {
-
     flex: 1;
-
 }
 
-
 .destination-name {
-
-    font-size: 28px;
-
+    font-size: 25px;
 }
 
 
 /* =========================================================
-   FINAL
+   FINAL SCREEN
 ========================================================= */
 
 .final-small {
 
     font-family: Arial, sans-serif;
-
     font-size: 10px;
-
     letter-spacing: 4px;
-
     color: #b79a5a;
-
     margin-bottom: 20px;
 
 }
 
-
 .final-title {
 
     font-size:
-        clamp(
-            70px,
-            16vw,
-            105px
-        );
+        clamp(70px, 16vw, 105px);
 
     line-height: 0.8;
 
 }
 
-
 .final-date {
 
     margin-top: 35px;
-
     font-size: 40px;
 
 }
 
-
 .final-destination {
 
     margin-top: 8px;
-
-    font-size: 32px;
-
+    font-size: 30px;
     color: #873b47;
 
 }
-
 
 .divider {
 
     width: 60px;
-
     height: 1px;
-
     background: #b79a5a;
-
     margin: 30px auto;
 
 }
 
-
 .final-message {
 
     font-size: 29px;
-
     line-height: 1.4;
 
 }
 
-
 .signature {
 
     margin-top: 30px;
-
     font-family: Arial, sans-serif;
-
     font-size: 12px;
-
     line-height: 1.7;
 
 }
 
-
 .secondary-btn {
 
     margin-top: 25px;
-
     padding: 12px 20px;
 
     border:
-        1px solid
-        #e3d8ce;
+        1px solid #e3d8ce;
 
     border-radius: 50px;
-
     background: transparent;
-
     color: #873b47;
-
     cursor: pointer;
 
 }
@@ -769,43 +534,29 @@ h2 {
 .floating-heart {
 
     position: fixed;
-
     bottom: -30px;
 
     color:
-        rgba(
-            135,
-            59,
-            71,
-            0.2
-        );
+        rgba(135, 59, 71, 0.2);
 
     pointer-events: none;
 
     animation:
-        floatHeart
-        6s
-        linear
-        forwards;
+        floatHeart 6s linear forwards;
 
 }
-
 
 @keyframes floatHeart {
 
     from {
 
-        transform:
-            translateY(0);
-
+        transform: translateY(0);
         opacity: 0;
 
     }
 
     15% {
-
         opacity: 1;
-
     }
 
     to {
@@ -828,25 +579,18 @@ h2 {
 .confetti {
 
     position: fixed;
-
     top: -20px;
 
     width: 7px;
-
     height: 12px;
 
     z-index: 100;
-
     pointer-events: none;
 
     animation:
-        fall
-        5s
-        linear
-        forwards;
+        fall 5s linear forwards;
 
 }
-
 
 @keyframes fall {
 
@@ -870,10 +614,7 @@ h2 {
 @media (min-width: 600px) {
 
     .selection-grid {
-
-        grid-template-columns:
-            1fr 1fr;
-
+        grid-template-columns: 1fr 1fr;
     }
 
 }
@@ -886,29 +627,27 @@ h2 {
 @media (max-width: 480px) {
 
     .screen {
-
-        padding:
-            30px 17px;
-
+        padding: 30px 17px;
     }
 
     .subtitle {
-
         font-size: 23px;
-
     }
 
     .description {
-
         font-size: 13px;
-
     }
 
     .memory-image {
+        aspect-ratio: 3 / 4;
+    }
 
-        aspect-ratio:
-            3 / 4;
+    .destination-name {
+        font-size: 21px;
+    }
 
+    .final-message {
+        font-size: 25px;
     }
 
 }
@@ -917,9 +656,7 @@ h2 {
 
 </head>
 
-
 <body>
-
 
 <!-- =========================================================
      SCREEN 1 — WELCOME
@@ -929,68 +666,58 @@ h2 {
     id="welcome"
     class="screen active">
 
-    <div class="container">
+```
+<div class="container">
 
+    <div class="eyebrow">
+        A little surprise for you
+    </div>
 
-        <div class="eyebrow">
+    <h1>
 
-            A little surprise for you
+        25 Years
 
-        </div>
+        <br>
 
+        <span class="italic">
+            & Still Counting
+        </span>
 
-        <h1>
+    </h1>
 
-            25 Years
+    <div class="heart">
+        ♡
+    </div>
 
-            <br>
+    <div class="subtitle">
 
-            <span class="italic">
-                & Still Counting
-            </span>
+        Happy 25th Wedding Anniversary,
 
-        </h1>
+        <br>
 
-
-        <div class="heart">
-
-            ♡
-
-        </div>
-
-
-        <div class="subtitle">
-
-            Happy 25th Wedding Anniversary,
-
-            <br>
-
-            Amma & Appa
-
-        </div>
-
-
-        <p class="description">
-
-            A small journey through
-            25 years of memories...
-
-        </p>
-
-
-        <button
-            class="primary-btn"
-            onclick="showScreen('memories')">
-
-            Begin →
-
-        </button>
+        Amma & Appa
 
     </div>
 
+    <p class="description">
+
+        A small journey through
+        25 years of memories...
+
+    </p>
+
+    <button
+        class="primary-btn"
+        onclick="showScreen('memories')">
+
+        Begin →
+
+    </button>
+
+</div>
+```
+
 </section>
-
-
 
 <!-- =========================================================
      SCREEN 2 — MEMORIES
@@ -1000,111 +727,103 @@ h2 {
     id="memories"
     class="screen">
 
-    <div class="container">
+```
+<div class="container">
 
+    <div class="eyebrow">
+        THEN → NOW
+    </div>
 
-        <div class="eyebrow">
+    <h2>
 
-            THEN → NOW
+        25 Years
 
-        </div>
+        <br>
 
+        <span class="italic">
+            of memories
+        </span>
 
-        <h2>
+    </h2>
 
-            25 Years
+    <p class="description">
 
-            <br>
+        From the beginning...
 
-            <span class="italic">
-                of memories
-            </span>
+        <br>
 
-        </h2>
+        to everything you've built together.
 
+    </p>
 
-        <p class="description">
+    <div class="memory-wrapper">
 
-            From the beginning...
+        <div class="memory-image-container">
 
-            <br>
-
-            to everything you've built together.
-
-        </p>
-
-
-        <div class="memory-wrapper">
-
-
-            <div class="memory-image-container">
-
-                <img
-                    id="memoryImage"
-                    class="memory-image"
-                    src=""
-                    alt="Family memory">
-
-            </div>
-
-
-            <div
-                id="memoryCaption"
-                class="memory-caption">
-            </div>
-
-
-            <div
-                id="memoryCounter"
-                class="memory-counter">
-            </div>
-
-
-            <div class="carousel-controls">
-
-
-                <button
-                    class="carousel-arrow"
-                    onclick="previousMemory()">
-
-                    ‹
-
-                </button>
-
-
-                <div
-                    id="dots"
-                    class="dots">
-                </div>
-
-
-                <button
-                    class="carousel-arrow"
-                    onclick="nextMemory()">
-
-                    ›
-
-                </button>
-
-
-            </div>
+            <img
+                id="memoryImage"
+                class="memory-image"
+                src=""
+                alt="Family memory">
 
         </div>
 
+        <div
+            id="memoryCaption"
+            class="memory-caption">
+        </div>
 
-        <button
-            class="primary-btn"
-            onclick="showScreen('date')">
+        <div
+            id="memoryCounter"
+            class="memory-counter">
+        </div>
 
-            Plan the next adventure →
+        <div class="carousel-controls">
 
-        </button>
+            <button
+                class="carousel-arrow"
+                onclick="previousMemory()">
+
+                ‹
+
+            </button>
+
+            <div
+                id="dots"
+                class="dots">
+            </div>
+
+            <button
+                class="carousel-arrow"
+                onclick="nextMemory()">
+
+                ›
+
+            </button>
+
+        </div>
 
     </div>
 
+    <p class="description">
+
+        And because 25 years deserves
+        more than just a cake...
+
+    </p>
+
+    <button
+        class="primary-btn"
+        onclick="showScreen('date')">
+
+        Choose your celebration →
+
+    </button>
+
+</div>
+```
+
 </section>
-
-
 
 <!-- =========================================================
      SCREEN 3 — DATE
@@ -1114,69 +833,63 @@ h2 {
     id="date"
     class="screen">
 
-    <div class="container">
+```
+<div class="container">
 
-
-        <div class="eyebrow">
-
-            One thing isn't cancelled
-
-        </div>
-
-
-        <h2>
-
-            The outing
-
-            <br>
-
-            <span class="italic">
-                is still happening.
-            </span>
-
-        </h2>
-
-
-        <p class="description">
-
-            Tomorrow didn't work out.
-
-            <br>
-
-            Appa has work.
-
-            <br><br>
-
-            But 25 years deserve a proper celebration.
-
-            <br>
-
-            Pick a day that works for both of you.
-
-        </p>
-
-
-        <div
-            id="dateGrid"
-            class="selection-grid">
-        </div>
-
-
-        <button
-            id="dateButton"
-            class="primary-btn"
-            disabled
-            onclick="goToDestination()">
-
-            Choose a date
-
-        </button>
-
+    <div class="eyebrow">
+        So... one small problem 😌
     </div>
 
+    <h2>
+
+        Tomorrow didn't work.
+
+        <br>
+
+        <span class="italic">
+            But the date is still on.
+        </span>
+
+    </h2>
+
+    <p class="description">
+
+        Appa has work tomorrow,
+        so the anniversary outing has to wait.
+
+        <br><br>
+
+        Amma, you still wanted your outing...
+
+        <br>
+
+        So here we are. ❤️
+
+        <br><br>
+
+        Pick a date that works for both of you.
+
+    </p>
+
+    <div
+        id="dateGrid"
+        class="selection-grid">
+    </div>
+
+    <button
+        id="dateButton"
+        class="primary-btn"
+        disabled
+        onclick="goToDestination()">
+
+        Choose a date
+
+    </button>
+
+</div>
+```
+
 </section>
-
-
 
 <!-- =========================================================
      SCREEN 4 — DESTINATION
@@ -1186,58 +899,58 @@ h2 {
     id="destination"
     class="screen">
 
-    <div class="container">
+```
+<div class="container">
 
-
-        <div class="eyebrow">
-
-            One last decision
-
-        </div>
-
-
-        <h2>
-
-            Where are we
-
-            <br>
-
-            <span class="italic">
-                going?
-            </span>
-
-        </h2>
-
-
-        <p class="description">
-
-            Pick the kind of day
-            you'd like to have together.
-
-        </p>
-
-
-        <div
-            id="destinationGrid"
-            class="selection-grid">
-        </div>
-
-
-        <button
-            id="destinationButton"
-            class="primary-btn"
-            disabled
-            onclick="showFinal()">
-
-            Choose a destination
-
-        </button>
-
+    <div class="eyebrow">
+        The important question
     </div>
 
+    <h2>
+
+        Where should
+
+        <br>
+
+        <span class="italic">
+            we go?
+        </span>
+
+    </h2>
+
+    <p class="description">
+
+        Four options.
+
+        <br>
+
+        One anniversary.
+
+        <br><br>
+
+        You two decide. ❤️
+
+    </p>
+
+    <div
+        id="destinationGrid"
+        class="selection-grid">
+    </div>
+
+    <button
+        id="destinationButton"
+        class="primary-btn"
+        disabled
+        onclick="showFinal()">
+
+        Choose a destination
+
+    </button>
+
+</div>
+```
+
 </section>
-
-
 
 <!-- =========================================================
      SCREEN 5 — FINAL
@@ -1247,97 +960,89 @@ h2 {
     id="final"
     class="screen">
 
-    <div class="container">
+```
+<div class="container">
 
+    <div class="final-small">
+        OKAY, IT'S DECIDED
+    </div>
 
-        <div class="final-small">
+    <div class="final-title">
 
-            THE NEXT CHAPTER
+        The next
 
-        </div>
+        <br>
 
-
-        <div class="final-title">
-
-            It's a
-
-            <br>
-
-            <span class="italic">
-                date.
-            </span>
-
-        </div>
-
-
-        <div
-            id="finalDate"
-            class="final-date">
-        </div>
-
-
-        <div
-            id="finalDestination"
-            class="final-destination">
-        </div>
-
-
-        <div class="divider"></div>
-
-
-        <div class="final-message">
-
-            25 years down.
-
-            <br>
-
-            Many more memories
-            to make.
-
-            <br>
-
-            ❤️
-
-        </div>
-
-
-        <p class="description">
-
-            Tomorrow may not have worked.
-
-            <br>
-
-            But the celebration isn't over.
-
-        </p>
-
-
-        <div class="signature">
-
-            Made with love,
-
-            <br>
-
-            <strong>
-                Your daughter
-            </strong>
-
-        </div>
-
-
-        <button
-            class="secondary-btn"
-            onclick="showScreen('memories')">
-
-            ↺ See the memories again
-
-        </button>
+        <span class="italic">
+            adventure.
+        </span>
 
     </div>
 
+    <div
+        id="finalDate"
+        class="final-date">
+    </div>
+
+    <div
+        id="finalDestination"
+        class="final-destination">
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="final-message">
+
+        25 years together.
+
+        <br>
+
+        And we're not done yet.
+
+        <br>
+
+        ❤️
+
+    </div>
+
+    <p class="description">
+
+        Tomorrow may not have worked.
+
+        <br>
+
+        But the celebration isn't over.
+
+    </p>
+
+    <div class="signature">
+
+        This one is from me,
+
+        <br>
+
+        with lots of love,
+
+        <br>
+
+        <strong>
+            Your daughter ❤️
+        </strong>
+
+    </div>
+
+    <button
+        class="secondary-btn"
+        onclick="showScreen('memories')">
+
+        ↺ See the memories again
+
+    </button>
+
+</div>
+```
+
 </section>
-
-
 
 <script>
 
@@ -1345,36 +1050,44 @@ h2 {
    PHOTOS
 
    IMPORTANT:
-   These files remain on your device.
+   Keep these photos inside the "images" folder.
 
-   Change the filenames to match your actual photos.
+   Example:
+
+   images/wedding.jpg
+   images/photo2.jpg
+   images/photo3.jpg
+   images/photo4.jpg
+   images/recent.jpg
+
+   These photos are loaded directly from the device.
 ========================================================= */
 
 const memories = [
 
     {
         image: "images/wedding.jpg",
-        caption: "And it all began..."
+        caption: "25 years ago..."
     },
 
     {
         image: "images/photo2.jpg",
-        caption: "Two people. One journey."
+        caption: "When it was just the two of you ❤️"
     },
 
     {
         image: "images/photo3.jpg",
-        caption: "And then, a family."
+        caption: "Then I came along... 😌"
     },
 
     {
         image: "images/photo4.jpg",
-        caption: "A lot has happened since then. 😂"
+        caption: "Somehow, you two survived all these years 😂"
     },
 
     {
         image: "images/recent.jpg",
-        caption: "25 years later..."
+        caption: "And here we are — 25 years later."
     }
 
 ];
@@ -1382,8 +1095,6 @@ const memories = [
 
 /* =========================================================
    DATES
-
-   CHANGE THESE TO REAL DATES YOUR DAD CAN TAKE OFF.
 ========================================================= */
 
 const dates = [
@@ -1391,33 +1102,36 @@ const dates = [
     {
         day: "Tuesday",
         date: "8 September",
-        description: "A little anniversary escape ❤️"
+        description:
+            "If this works for both of you ❤️"
     },
 
     {
         day: "Tuesday",
         date: "15 September",
-        description: "A day to celebrate 25 years"
+        description:
+            "If this works for both of you ❤️"
     },
 
     {
         day: "Tuesday",
         date: "22 September",
-        description: "Time for a special outing"
+        description:
+            "If this works for both of you ❤️"
     },
 
     {
         day: "Tuesday",
         date: "29 September",
-        description: "One more chance for our date"
+        description:
+            "If this works for both of you ❤️"
     }
 
 ];
 
+
 /* =========================================================
    DESTINATIONS
-
-   CHANGE THESE TO ACTUAL PLACES.
 ========================================================= */
 
 const destinations = [
@@ -1426,21 +1140,21 @@ const destinations = [
         icon: "🏞️",
         name: "Mazhampuzha Dam + Tipu's Fort",
         description:
-            "A relaxed day of sightseeing & exploring"
+            "A relaxed day of exploring together"
     },
 
     {
         icon: "💦",
         name: "Monkey Falls",
         description:
-            "Waterfalls, nature & a refreshing escape"
+            "Water, nature & a refreshing escape"
     },
 
     {
         icon: "🐅",
         name: "Topslip + Anamalai Tiger Reserve",
         description:
-            "Forest, wildlife & a proper adventure"
+            "A little adventure in the forest"
     },
 
     {
@@ -1470,28 +1184,19 @@ let selectedDestination = null;
 
 function showScreen(id) {
 
-
     document
         .querySelectorAll(".screen")
         .forEach(screen => {
 
-            screen.classList.remove(
-                "active"
-            );
+            screen.classList.remove("active");
 
         });
-
 
     document
         .getElementById(id)
         .classList.add("active");
 
-
-    window.scrollTo(
-        0,
-        0
-    );
-
+    window.scrollTo(0, 0);
 
     createFloatingHeart();
 
@@ -1504,36 +1209,24 @@ function showScreen(id) {
 
 function setupCarousel() {
 
-
     const dots =
-        document.getElementById(
-            "dots"
-        );
-
+        document.getElementById("dots");
 
     memories.forEach(
         (memory, index) => {
 
-
             const dot =
-                document.createElement(
-                    "span"
-                );
+                document.createElement("span");
 
-
-            dot.className =
-                "dot";
-
+            dot.className = "dot";
 
             dot.onclick =
                 () => showMemory(index);
-
 
             dots.appendChild(dot);
 
         }
     );
-
 
     showMemory(0);
 
@@ -1542,7 +1235,6 @@ function setupCarousel() {
 
 function showMemory(index) {
 
-
     if (index < 0) {
 
         index =
@@ -1550,55 +1242,33 @@ function showMemory(index) {
 
     }
 
-
-    if (
-        index >= memories.length
-    ) {
+    if (index >= memories.length) {
 
         index = 0;
 
     }
 
-
     currentMemory = index;
 
-
     const image =
-        document.getElementById(
-            "memoryImage"
-        );
-
+        document.getElementById("memoryImage");
 
     const caption =
-        document.getElementById(
-            "memoryCaption"
-        );
-
+        document.getElementById("memoryCaption");
 
     const counter =
-        document.getElementById(
-            "memoryCounter"
-        );
-
+        document.getElementById("memoryCounter");
 
     image.classList.add("fade");
-
 
     setTimeout(
         () => {
 
-
-            image.src =
-                memories[index].image;
-
-
             caption.textContent =
                 memories[index].caption;
 
-
             counter.textContent =
                 `${index + 1} / ${memories.length}`;
-
 
             document
                 .querySelectorAll(".dot")
@@ -1613,16 +1283,23 @@ function showMemory(index) {
                     }
                 );
 
+            image.onload = () => {
 
-            image.onload =
-                () => {
+                image.classList.remove("fade");
 
-                    image.classList.remove(
-                        "fade"
-                    );
+            };
 
-                };
+            image.onerror = () => {
 
+                image.classList.remove("fade");
+
+                caption.textContent =
+                    "Add your photo to the images folder ❤️";
+
+            };
+
+            image.src =
+                memories[index].image;
 
         },
         250
@@ -1655,26 +1332,19 @@ function previousMemory() {
 
 function setupDates() {
 
-
     const grid =
-        document.getElementById(
-            "dateGrid"
-        );
-
+        document.getElementById("dateGrid");
 
     dates.forEach(
         item => {
 
-
             const card =
-                document.createElement(
-                    "button"
-                );
-
+                document.createElement("button");
 
             card.className =
                 "selection-card";
 
+            card.type = "button";
 
             card.innerHTML = `
 
@@ -1704,10 +1374,8 @@ function setupDates() {
 
             `;
 
-
             card.onclick =
                 () => {
-
 
                     document
                         .querySelectorAll(
@@ -1723,35 +1391,27 @@ function setupDates() {
                             }
                         );
 
-
                     card.classList.add(
                         "selected"
                     );
 
-
                     selectedDate =
                         item;
-
 
                     const button =
                         document.getElementById(
                             "dateButton"
                         );
 
-
                     button.disabled =
                         false;
-
 
                     button.textContent =
                         "Continue →";
 
                 };
 
-
-            grid.appendChild(
-                card
-            );
+            grid.appendChild(card);
 
         }
     );
@@ -1765,26 +1425,21 @@ function setupDates() {
 
 function setupDestinations() {
 
-
     const grid =
         document.getElementById(
             "destinationGrid"
         );
 
-
     destinations.forEach(
         item => {
 
-
             const card =
-                document.createElement(
-                    "button"
-                );
-
+                document.createElement("button");
 
             card.className =
                 "selection-card destination-card";
 
+            card.type = "button";
 
             card.innerHTML = `
 
@@ -1818,10 +1473,8 @@ function setupDestinations() {
 
             `;
 
-
             card.onclick =
                 () => {
-
 
                     document
                         .querySelectorAll(
@@ -1837,35 +1490,27 @@ function setupDestinations() {
                             }
                         );
 
-
                     card.classList.add(
                         "selected"
                     );
 
-
                     selectedDestination =
                         item;
-
 
                     const button =
                         document.getElementById(
                             "destinationButton"
                         );
 
-
                     button.disabled =
                         false;
-
 
                     button.textContent =
                         "Reveal the plan →";
 
                 };
 
-
-            grid.appendChild(
-                card
-            );
+            grid.appendChild(card);
 
         }
     );
@@ -1879,17 +1524,11 @@ function setupDestinations() {
 
 function goToDestination() {
 
-
     if (!selectedDate) {
-
         return;
-
     }
 
-
-    showScreen(
-        "destination"
-    );
+    showScreen("destination");
 
 }
 
@@ -1900,7 +1539,6 @@ function goToDestination() {
 
 function showFinal() {
 
-
     if (
         !selectedDate ||
         !selectedDestination
@@ -1910,13 +1548,11 @@ function showFinal() {
 
     }
 
-
     document.getElementById(
         "finalDate"
     ).textContent =
 
         `${selectedDate.day}, ${selectedDate.date}`;
-
 
     document.getElementById(
         "finalDestination"
@@ -1924,11 +1560,7 @@ function showFinal() {
 
         `${selectedDestination.icon} ${selectedDestination.name}`;
 
-
-    showScreen(
-        "final"
-    );
-
+    showScreen("final");
 
     setTimeout(
         launchConfetti,
@@ -1944,39 +1576,25 @@ function showFinal() {
 
 function createFloatingHeart() {
 
-
     const heart =
-        document.createElement(
-            "div"
-        );
-
+        document.createElement("div");
 
     heart.className =
         "floating-heart";
 
-
     heart.textContent =
         "♡";
 
-
     heart.style.left =
-        Math.random() *
-        100 +
-        "vw";
-
+        Math.random() * 100 + "vw";
 
     heart.style.fontSize =
         (
             15 +
             Math.random() * 15
-        ) +
-        "px";
+        ) + "px";
 
-
-    document.body.appendChild(
-        heart
-    );
-
+    document.body.appendChild(heart);
 
     setTimeout(
         () => {
@@ -1996,7 +1614,6 @@ function createFloatingHeart() {
 
 function launchConfetti() {
 
-
     const colors = [
 
         "#873b47",
@@ -2006,23 +1623,17 @@ function launchConfetti() {
 
     ];
 
-
     for (
         let i = 0;
         i < 80;
         i++
     ) {
 
-
         const piece =
-            document.createElement(
-                "div"
-            );
-
+            document.createElement("div");
 
         piece.className =
             "confetti";
-
 
         piece.style.background =
             colors[
@@ -2032,31 +1643,19 @@ function launchConfetti() {
                 )
             ];
 
-
         piece.style.left =
-            Math.random() *
-            100 +
-            "vw";
-
+            Math.random() * 100 + "vw";
 
         piece.style.animationDuration =
             (
                 3 +
                 Math.random() * 4
-            ) +
-            "s";
-
+            ) + "s";
 
         piece.style.animationDelay =
-            Math.random() *
-            0.5 +
-            "s";
+            Math.random() * 0.5 + "s";
 
-
-        document.body.appendChild(
-            piece
-        );
-
+        document.body.appendChild(piece);
 
         setTimeout(
             () => {
@@ -2078,11 +1677,8 @@ function launchConfetti() {
 
 let touchStartX = 0;
 
-
 document
-    .getElementById(
-        "memoryImage"
-    )
+    .getElementById("memoryImage")
     .addEventListener(
         "touchstart",
         event => {
@@ -2098,22 +1694,17 @@ document
 
 
 document
-    .getElementById(
-        "memoryImage"
-    )
+    .getElementById("memoryImage")
     .addEventListener(
         "touchend",
         event => {
 
-
             const touchEndX =
                 event.changedTouches[0].clientX;
-
 
             const difference =
                 touchStartX -
                 touchEndX;
-
 
             if (
                 Math.abs(difference) < 50
@@ -2122,7 +1713,6 @@ document
                 return;
 
             }
-
 
             if (
                 difference > 0
@@ -2154,7 +1744,6 @@ setupDates();
 setupDestinations();
 
 </script>
-
 
 </body>
 
