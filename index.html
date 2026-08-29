@@ -3,1114 +3,917 @@
 
 <head>
 
-    <meta charset="UTF-8">
+<meta charset="UTF-8">
 
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
 
-    <meta name="theme-color"
-          content="#fbf7f2">
+<title>25 Years & Still Counting ❤️</title>
 
-    <title>25 Years & Still Counting ❤️</title>
 
+<style>
 
-    <!-- =====================================================
-         FONTS
-    ====================================================== -->
+/* =========================================================
+   BASIC RESET
+========================================================= */
 
-    <link rel="preconnect"
-          href="https://fonts.googleapis.com">
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
-    <link rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossorigin>
+html {
+    scroll-behavior: smooth;
+}
 
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap"
-          rel="stylesheet">
+body {
 
+    background: #faf7f2;
 
-    <!-- =====================================================
-         CSS
-    ====================================================== -->
+    color: #302824;
 
-    <style>
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
 
-        /* =====================================================
-           COLORS & VARIABLES
-        ====================================================== */
+    overflow-x: hidden;
+}
 
-        :root {
 
-            --background: #fbf7f2;
+/* =========================================================
+   SCREEN SYSTEM
+========================================================= */
 
-            --cream: #f3ebe3;
+.screen {
 
-            --burgundy: #873b47;
+    min-height: 100vh;
 
-            --burgundy-dark: #682c36;
+    display: none;
 
-            --gold: #b79a5a;
+    align-items: center;
 
-            --brown: #302824;
+    justify-content: center;
 
-            --muted: #756c66;
+    padding: 40px 20px;
 
-            --border: #e3d8ce;
+    text-align: center;
 
-            --white: #ffffff;
+}
 
-            --heading:
-                "Cormorant Garamond",
-                Georgia,
-                serif;
+.screen.active {
 
-            --body:
-                "Inter",
-                Arial,
-                sans-serif;
+    display: flex;
 
-        }
+    animation:
+        appear 0.7s ease;
 
+}
 
-        /* =====================================================
-           RESET
-        ====================================================== */
+@keyframes appear {
 
-        * {
+    from {
 
-            margin: 0;
+        opacity: 0;
 
-            padding: 0;
+        transform:
+            translateY(20px);
 
-            box-sizing: border-box;
+    }
 
-        }
+    to {
 
+        opacity: 1;
 
-        html {
+        transform:
+            translateY(0);
 
-            scroll-behavior: smooth;
+    }
 
-        }
+}
 
 
-        body {
+.container {
 
-            background: var(--background);
+    width: 100%;
 
-            color: var(--brown);
+    max-width: 650px;
 
-            font-family: var(--body);
+    margin: auto;
 
-            overflow-x: hidden;
+}
 
-        }
 
+/* =========================================================
+   TYPOGRAPHY
+========================================================= */
 
-        button {
+.eyebrow {
 
-            font-family: inherit;
+    font-family:
+        Arial,
+        sans-serif;
 
-        }
+    font-size: 10px;
 
+    letter-spacing: 4px;
 
-        /* =====================================================
-           SCREEN
-        ====================================================== */
+    text-transform: uppercase;
 
-        .screen {
+    color: #b79a5a;
 
-            min-height: 100vh;
+    margin-bottom: 20px;
 
-            display: none;
+}
 
-            align-items: center;
 
-            justify-content: center;
+h1,
+h2 {
 
-            padding:
-                40px
-                20px;
+    font-weight: 400;
 
-            position: relative;
+}
 
-            overflow: hidden;
 
-        }
+h1 {
 
+    font-size:
+        clamp(
+            60px,
+            14vw,
+            105px
+        );
 
-        .screen.active {
+    line-height: 0.82;
 
-            display: flex;
+}
 
-            animation:
-                screenAppear
-                0.8s
-                ease;
 
-        }
+h2 {
 
+    font-size:
+        clamp(
+            48px,
+            11vw,
+            75px
+        );
 
-        @keyframes screenAppear {
+    line-height: 0.88;
 
-            from {
+}
 
-                opacity: 0;
 
-                transform:
-                    translateY(20px);
+.italic {
 
-            }
+    font-style: italic;
 
-            to {
+}
 
-                opacity: 1;
 
-                transform:
-                    translateY(0);
+.subtitle {
 
-            }
+    margin-top: 30px;
 
-        }
+    font-size: 27px;
 
+    line-height: 1.25;
 
-        .container {
+}
 
-            width: 100%;
 
-            max-width: 620px;
+.description {
 
-            margin: auto;
+    margin: 20px auto 0;
 
-            text-align: center;
+    max-width: 500px;
 
-        }
+    font-family:
+        Arial,
+        sans-serif;
 
+    font-size: 14px;
 
-        /* =====================================================
-           TYPOGRAPHY
-        ====================================================== */
+    line-height: 1.8;
 
-        .eyebrow {
+    color: #756c66;
 
-            font-size: 10px;
+}
 
-            letter-spacing: 3px;
 
-            text-transform: uppercase;
+/* =========================================================
+   HEART
+========================================================= */
 
-            color: var(--gold);
+.heart {
 
-            margin-bottom: 18px;
+    margin: 25px 0;
 
-        }
+    font-size: 35px;
 
+    color: #873b47;
 
-        h1,
-        h2,
-        h3 {
+    animation:
+        heartbeat
+        2s
+        infinite;
 
-            font-family: var(--heading);
+}
 
-            font-weight: 500;
 
-        }
+@keyframes heartbeat {
 
+    50% {
 
-        h1 {
+        transform:
+            scale(1.15);
 
-            font-size:
-                clamp(
-                    58px,
-                    15vw,
-                    105px
-                );
+    }
 
-            line-height: 0.82;
+}
 
-        }
 
+/* =========================================================
+   BUTTON
+========================================================= */
 
-        h2 {
+.primary-btn {
 
-            font-size:
-                clamp(
-                    45px,
-                    11vw,
-                    68px
-                );
+    margin-top: 35px;
 
-            line-height: 0.9;
+    padding: 15px 28px;
 
-        }
+    border: none;
 
+    border-radius: 50px;
 
-        .italic {
+    background: #873b47;
 
-            font-style: italic;
+    color: white;
 
-        }
+    font-family: Arial, sans-serif;
 
+    font-size: 13px;
 
-        .subtitle {
+    cursor: pointer;
 
-            font-family: var(--heading);
+    transition: 0.25s;
 
-            font-size: 27px;
+}
 
-            line-height: 1.25;
 
-            margin-top: 30px;
+.primary-btn:hover {
 
-        }
+    background: #682c36;
 
+    transform:
+        translateY(-2px);
 
-        .description {
+}
 
-            max-width: 480px;
 
-            margin:
-                20px
-                auto
-                0;
+.primary-btn:disabled {
 
-            color: var(--muted);
+    opacity: 0.35;
 
-            font-size: 14px;
+    cursor: not-allowed;
 
-            line-height: 1.8;
+    transform: none;
 
-        }
+}
 
 
-        /* =====================================================
-           HEART
-        ====================================================== */
+/* =========================================================
+   MEMORY CAROUSEL
+========================================================= */
 
-        .heart {
+.memory-wrapper {
 
-            color: var(--burgundy);
+    margin:
+        35px auto 0;
 
-            font-size: 30px;
+    max-width: 470px;
 
-            margin: 22px 0;
+}
 
-            animation:
-                heartbeat
-                2s
-                ease-in-out
-                infinite;
 
-        }
+.memory-image-container {
 
+    overflow: hidden;
 
-        @keyframes heartbeat {
+    border-radius: 22px;
 
-            0%,
-            100% {
+    background: #eee5dc;
 
-                transform: scale(1);
+    box-shadow:
+        0 20px 50px
+        rgba(
+            48,
+            40,
+            36,
+            0.15
+        );
 
-            }
+}
 
-            50% {
 
-                transform: scale(1.15);
+.memory-image {
 
-            }
+    width: 100%;
 
-        }
+    aspect-ratio: 4 / 5;
 
+    object-fit: cover;
 
-        /* =====================================================
-           BUTTONS
-        ====================================================== */
+    display: block;
 
-        .primary-btn {
+    transition:
+        opacity 0.35s,
+        transform 0.35s;
 
-            margin-top: 32px;
+}
 
-            padding:
-                15px
-                28px;
 
-            border: none;
+.memory-image.fade {
 
-            border-radius: 999px;
+    opacity: 0;
 
-            background:
-                var(--burgundy);
+    transform:
+        scale(1.03);
 
-            color: white;
+}
 
-            font-size: 13px;
 
-            cursor: pointer;
+.memory-caption {
 
-            transition:
-                0.25s ease;
+    margin-top: 18px;
 
-        }
+    font-size: 29px;
 
+}
 
-        .primary-btn:hover {
 
-            background:
-                var(--burgundy-dark);
+.memory-counter {
 
-            transform:
-                translateY(-2px);
+    margin-top: 7px;
 
-            box-shadow:
-                0 12px 30px
-                rgba(
-                    135,
-                    59,
-                    71,
-                    0.18
-                );
+    font-family: Arial, sans-serif;
 
-        }
+    font-size: 10px;
 
+    letter-spacing: 2px;
 
-        .primary-btn:disabled {
+    color: #b79a5a;
 
-            opacity: 0.4;
+}
 
-            cursor: not-allowed;
 
-            transform: none;
+.carousel-controls {
 
-            box-shadow: none;
+    display: flex;
 
-        }
+    align-items: center;
 
+    justify-content: center;
 
-        .secondary-btn {
+    gap: 25px;
 
-            margin-top: 20px;
+    margin-top: 20px;
 
-            padding:
-                12px
-                22px;
+}
 
-            background: transparent;
 
-            border:
-                1px solid
-                var(--border);
+.carousel-arrow {
 
-            border-radius: 999px;
+    width: 42px;
 
-            color:
-                var(--burgundy);
+    height: 42px;
 
-            cursor: pointer;
+    border-radius: 50%;
 
-        }
+    border:
+        1px solid
+        #e3d8ce;
 
+    background: transparent;
 
-        /* =====================================================
-           WELCOME SCREEN
-        ====================================================== */
+    font-size: 25px;
 
-        .welcome-inner {
+    cursor: pointer;
 
-            position: relative;
+}
 
-        }
 
+.dots {
 
-        .welcome-inner::before {
+    display: flex;
 
-            content: "";
+    gap: 7px;
 
-            position: absolute;
+}
 
-            width: 340px;
 
-            height: 340px;
+.dot {
 
-            border:
-                1px solid
-                rgba(
-                    183,
-                    154,
-                    90,
-                    0.18
-                );
+    width: 6px;
 
-            border-radius: 50%;
+    height: 6px;
 
-            left: 50%;
+    border-radius: 50%;
 
-            top: 50%;
+    background: #ddd0c5;
 
-            transform:
-                translate(
-                    -50%,
-                    -50%
-                );
+    cursor: pointer;
 
-            pointer-events: none;
+}
 
-        }
 
+.dot.active {
 
-        /* =====================================================
-           MEMORY CAROUSEL
-        ====================================================== */
+    background: #873b47;
 
-        .memory-wrapper {
+    transform:
+        scale(1.4);
 
-            max-width: 480px;
+}
 
-            margin:
-                35px
-                auto
-                0;
 
-        }
+/* =========================================================
+   SELECTION CARDS
+========================================================= */
 
+.selection-grid {
 
-        .memory-image-container {
+    display: grid;
 
-            width: 100%;
+    grid-template-columns:
+        1fr;
 
-            overflow: hidden;
+    gap: 12px;
 
-            border-radius: 20px;
+    margin-top: 30px;
 
-            background:
-                var(--cream);
+}
 
-            box-shadow:
-                0 20px 50px
-                rgba(
-                    48,
-                    40,
-                    36,
-                    0.12
-                );
 
-        }
+.selection-card {
 
+    width: 100%;
 
-        .memory-image {
+    padding: 18px;
 
-            width: 100%;
+    border:
+        1px solid
+        #e3d8ce;
 
-            aspect-ratio: 4 / 5;
+    border-radius: 17px;
 
-            display: block;
+    background:
+        rgba(
+            255,
+            255,
+            255,
+            0.5
+        );
 
-            object-fit: cover;
+    text-align: left;
 
-            transition:
-                opacity 0.4s ease,
-                transform 0.5s ease;
+    cursor: pointer;
 
-        }
+    transition: 0.25s;
 
+    color: #302824;
 
-        .memory-image.fade {
+}
 
-            opacity: 0;
 
-            transform:
-                scale(1.03);
+.selection-card:hover {
 
-        }
+    background: white;
 
+    border-color: #b79a5a;
 
-        .memory-caption {
+}
 
-            font-family: var(--heading);
 
-            font-size: 28px;
+.selection-card.selected {
 
-            margin-top: 18px;
+    background: #873b47;
 
-        }
+    color: white;
 
+    border-color: #873b47;
 
-        .memory-counter {
+}
 
-            color: var(--gold);
 
-            font-size: 10px;
+.card-top {
 
-            letter-spacing: 2px;
+    display: flex;
 
-            margin-top: 8px;
+    align-items: center;
 
-        }
+    justify-content:
+        space-between;
 
+}
 
-        .carousel-controls {
 
-            display: flex;
+.day {
 
-            justify-content: center;
+    font-family: Arial, sans-serif;
 
-            align-items: center;
+    font-size: 10px;
 
-            gap: 25px;
+    letter-spacing: 2px;
 
-            margin-top: 20px;
+    text-transform: uppercase;
 
-        }
+    opacity: 0.65;
 
+}
 
-        .carousel-arrow {
 
-            width: 42px;
+.date {
 
-            height: 42px;
+    font-size: 30px;
 
-            border-radius: 50%;
+    margin-top: 3px;
 
-            border:
-                1px solid
-                var(--border);
+}
 
-            background: transparent;
 
-            cursor: pointer;
+.card-description {
 
-            font-size: 23px;
+    margin-top: 5px;
 
-            color: var(--brown);
+    font-family: Arial, sans-serif;
 
-        }
+    font-size: 11px;
 
+    opacity: 0.65;
 
-        .dots {
+}
 
-            display: flex;
 
-            gap: 7px;
+.check {
 
-        }
+    width: 24px;
 
+    height: 24px;
 
-        .dot {
+    border:
+        1px solid
+        currentColor;
 
-            width: 6px;
+    border-radius: 50%;
 
-            height: 6px;
+    display: flex;
 
-            border-radius: 50%;
+    align-items: center;
 
-            background:
-                var(--border);
+    justify-content: center;
 
-            cursor: pointer;
+    opacity: 0.4;
 
-            transition:
-                0.25s ease;
+}
 
-        }
 
+.selected .check {
 
-        .dot.active {
+    opacity: 1;
 
-            background:
-                var(--burgundy);
+}
 
-            transform:
-                scale(1.4);
 
-        }
+/* =========================================================
+   DESTINATION
+========================================================= */
 
+.destination-card {
 
-        /* =====================================================
-           SELECTION CARDS
-        ====================================================== */
+    display: flex;
 
-        .selection-grid {
+    align-items: center;
 
-            display: grid;
+    gap: 15px;
 
-            grid-template-columns:
-                1fr;
+}
 
-            gap: 12px;
 
-            margin-top: 30px;
+.destination-icon {
 
-        }
+    width: 48px;
 
+    height: 48px;
 
-        .selection-card {
+    flex-shrink: 0;
 
-            width: 100%;
+    border-radius: 50%;
 
-            padding: 18px 20px;
+    background: #f1e7dd;
 
-            border:
-                1px solid
-                var(--border);
+    display: flex;
 
-            border-radius: 17px;
+    align-items: center;
 
-            background:
-                rgba(
-                    255,
-                    255,
-                    255,
-                    0.4
-                );
+    justify-content: center;
 
-            color: var(--brown);
+    font-family: Arial, sans-serif;
 
-            cursor: pointer;
+    font-size: 22px;
 
-            text-align: left;
+}
 
-            transition:
-                0.25s ease;
 
-        }
+.selected .destination-icon {
 
+    background:
+        rgba(
+            255,
+            255,
+            255,
+            0.15
+        );
 
-        .selection-card:hover {
+}
 
-            background:
-                white;
 
-            transform:
-                translateY(-2px);
+.destination-info {
 
-            border-color:
-                var(--gold);
+    flex: 1;
 
-        }
+}
 
 
-        .selection-card.selected {
+.destination-name {
 
-            background:
-                var(--burgundy);
+    font-size: 28px;
 
-            color: white;
+}
 
-            border-color:
-                var(--burgundy);
 
-        }
+/* =========================================================
+   FINAL
+========================================================= */
 
+.final-small {
 
-        .card-top {
+    font-family: Arial, sans-serif;
 
-            display: flex;
+    font-size: 10px;
 
-            justify-content:
-                space-between;
+    letter-spacing: 4px;
 
-            align-items: center;
+    color: #b79a5a;
 
-        }
+    margin-bottom: 20px;
 
+}
 
-        .day {
 
-            font-size: 10px;
+.final-title {
 
-            letter-spacing: 2px;
+    font-size:
+        clamp(
+            70px,
+            16vw,
+            105px
+        );
 
-            text-transform:
-                uppercase;
+    line-height: 0.8;
 
-            opacity: 0.65;
+}
 
-        }
 
+.final-date {
 
-        .date {
+    margin-top: 35px;
 
-            font-family:
-                var(--heading);
+    font-size: 40px;
 
-            font-size: 29px;
+}
 
-            margin-top: 3px;
 
-        }
+.final-destination {
 
+    margin-top: 8px;
 
-        .card-description {
+    font-size: 32px;
 
-            font-size: 11px;
+    color: #873b47;
 
-            margin-top: 5px;
+}
 
-            opacity: 0.65;
 
-        }
+.divider {
 
+    width: 60px;
 
-        .check {
+    height: 1px;
 
-            width: 23px;
+    background: #b79a5a;
 
-            height: 23px;
+    margin: 30px auto;
 
-            border:
-                1px solid
-                currentColor;
+}
 
-            border-radius: 50%;
 
-            display: flex;
+.final-message {
 
-            align-items: center;
+    font-size: 29px;
 
-            justify-content: center;
+    line-height: 1.4;
 
-            opacity: 0.35;
+}
 
-        }
 
+.signature {
 
-        .selected .check {
+    margin-top: 30px;
 
-            opacity: 1;
+    font-family: Arial, sans-serif;
 
-        }
+    font-size: 12px;
 
+    line-height: 1.7;
 
-        /* =====================================================
-           DESTINATION CARDS
-        ====================================================== */
+}
 
-        .destination-card {
 
-            display: flex;
+.secondary-btn {
 
-            align-items: center;
+    margin-top: 25px;
 
-            gap: 15px;
+    padding: 12px 20px;
 
-        }
+    border:
+        1px solid
+        #e3d8ce;
 
+    border-radius: 50px;
 
-        .destination-icon {
+    background: transparent;
 
-            width: 48px;
+    color: #873b47;
 
-            height: 48px;
+    cursor: pointer;
 
-            border-radius: 50%;
+}
 
-            display: flex;
 
-            align-items: center;
+/* =========================================================
+   FLOATING HEART
+========================================================= */
 
-            justify-content: center;
+.floating-heart {
 
-            background:
-                var(--cream);
+    position: fixed;
 
-            font-size: 22px;
+    bottom: -30px;
 
-            flex-shrink: 0;
+    color:
+        rgba(
+            135,
+            59,
+            71,
+            0.2
+        );
 
-        }
+    pointer-events: none;
 
+    animation:
+        floatHeart
+        6s
+        linear
+        forwards;
 
-        .selected
-        .destination-icon {
+}
 
-            background:
-                rgba(
-                    255,
-                    255,
-                    255,
-                    0.15
-                );
 
-        }
+@keyframes floatHeart {
 
+    from {
 
-        .destination-info {
+        transform:
+            translateY(0);
 
-            flex: 1;
+        opacity: 0;
 
-        }
+    }
 
+    15% {
 
-        .destination-name {
+        opacity: 1;
 
-            font-family:
-                var(--heading);
+    }
 
-            font-size: 27px;
+    to {
 
-        }
+        transform:
+            translateY(-110vh)
+            rotate(25deg);
 
+        opacity: 0;
 
-        /* =====================================================
-           FINAL SCREEN
-        ====================================================== */
+    }
 
-        .final-title {
+}
 
-            font-family:
-                var(--heading);
 
-            font-size:
-                clamp(
-                    65px,
-                    15vw,
-                    100px
-                );
+/* =========================================================
+   CONFETTI
+========================================================= */
 
-            line-height: 0.82;
+.confetti {
 
-        }
+    position: fixed;
 
+    top: -20px;
 
-        .final-small {
+    width: 7px;
 
-            font-size: 10px;
+    height: 12px;
 
-            letter-spacing: 3px;
+    z-index: 100;
 
-            text-transform:
-                uppercase;
+    pointer-events: none;
 
-            color:
-                var(--gold);
+    animation:
+        fall
+        5s
+        linear
+        forwards;
 
-            margin-bottom: 20px;
+}
 
-        }
 
+@keyframes fall {
 
-        .final-date {
+    to {
 
-            font-family:
-                var(--heading);
+        transform:
+            translateY(110vh)
+            rotate(720deg);
 
-            font-size: 38px;
+        opacity: 0;
 
-            margin-top: 35px;
+    }
 
-        }
+}
 
 
-        .final-destination {
+/* =========================================================
+   DESKTOP
+========================================================= */
 
-            font-family:
-                var(--heading);
+@media (min-width: 600px) {
 
-            font-size: 32px;
+    .selection-grid {
 
-            color:
-                var(--burgundy);
+        grid-template-columns:
+            1fr 1fr;
 
-            margin-top: 8px;
+    }
 
-        }
+}
 
 
-        .divider {
+/* =========================================================
+   MOBILE
+========================================================= */
 
-            width: 60px;
+@media (max-width: 480px) {
 
-            height: 1px;
+    .screen {
 
-            background:
-                var(--gold);
+        padding:
+            30px 17px;
 
-            margin:
-                30px
-                auto;
+    }
 
-        }
+    .subtitle {
 
+        font-size: 23px;
 
-        .final-message {
+    }
 
-            font-family:
-                var(--heading);
+    .description {
 
-            font-size: 28px;
+        font-size: 13px;
 
-            line-height: 1.35;
+    }
 
-        }
+    .memory-image {
 
+        aspect-ratio:
+            3 / 4;
 
-        .signature {
+    }
 
-            margin-top: 30px;
+}
 
-            font-size: 12px;
-
-            line-height: 1.7;
-
-        }
-
-
-        /* =====================================================
-           FLOATING HEARTS
-        ====================================================== */
-
-        .floating-heart {
-
-            position: fixed;
-
-            bottom: -20px;
-
-            color:
-                rgba(
-                    135,
-                    59,
-                    71,
-                    0.2
-                );
-
-            pointer-events: none;
-
-            animation:
-                floatUp
-                6s
-                linear
-                forwards;
-
-            z-index: 20;
-
-        }
-
-
-        @keyframes floatUp {
-
-            from {
-
-                transform:
-                    translateY(0)
-                    rotate(0deg);
-
-                opacity: 0;
-
-            }
-
-            15% {
-
-                opacity: 1;
-
-            }
-
-            to {
-
-                transform:
-                    translateY(-110vh)
-                    rotate(30deg);
-
-                opacity: 0;
-
-            }
-
-        }
-
-
-        /* =====================================================
-           CONFETTI
-        ====================================================== */
-
-        .confetti {
-
-            position: fixed;
-
-            top: -20px;
-
-            width: 7px;
-
-            height: 12px;
-
-            z-index: 100;
-
-            pointer-events: none;
-
-            animation:
-                confettiFall
-                linear
-                forwards;
-
-        }
-
-
-        @keyframes confettiFall {
-
-            to {
-
-                transform:
-                    translateY(110vh)
-                    rotate(720deg);
-
-                opacity: 0;
-
-            }
-
-        }
-
-
-        /* =====================================================
-           DESKTOP
-        ====================================================== */
-
-        @media (min-width: 600px) {
-
-            .selection-grid {
-
-                grid-template-columns:
-                    1fr 1fr;
-
-            }
-
-        }
-
-
-        /* =====================================================
-           MOBILE
-        ====================================================== */
-
-        @media (max-width: 480px) {
-
-            .screen {
-
-                padding:
-                    30px 17px;
-
-            }
-
-
-            .subtitle {
-
-                font-size: 24px;
-
-            }
-
-
-            .description {
-
-                font-size: 13px;
-
-            }
-
-
-            .memory-image {
-
-                aspect-ratio:
-                    3 / 4;
-
-            }
-
-        }
-
-    </style>
+</style>
 
 </head>
 
@@ -1118,1060 +921,1214 @@
 <body>
 
 
-    <!-- =====================================================
-         APPLICATION
-    ====================================================== -->
+<!-- =========================================================
+     SCREEN 1 — WELCOME
+========================================================= -->
 
-    <main id="app">
+<section
+    id="welcome"
+    class="screen active">
+
+    <div class="container">
 
 
-        <!-- =================================================
-             SCREEN 1 — WELCOME
-        ================================================== -->
+        <div class="eyebrow">
 
-        <section
-            id="screen-welcome"
-            class="screen active">
+            A little surprise for you
+
+        </div>
+
+
+        <h1>
+
+            25 Years
+
+            <br>
+
+            <span class="italic">
+                & Still Counting
+            </span>
+
+        </h1>
+
+
+        <div class="heart">
+
+            ♡
+
+        </div>
+
+
+        <div class="subtitle">
+
+            Happy 25th Wedding Anniversary,
+
+            <br>
+
+            Amma & Appa
+
+        </div>
+
+
+        <p class="description">
+
+            A small journey through
+            25 years of memories...
+
+        </p>
+
+
+        <button
+            class="primary-btn"
+            onclick="showScreen('memories')">
+
+            Begin →
+
+        </button>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     SCREEN 2 — MEMORIES
+========================================================= -->
+
+<section
+    id="memories"
+    class="screen">
+
+    <div class="container">
+
+
+        <div class="eyebrow">
+
+            THEN → NOW
+
+        </div>
+
+
+        <h2>
+
+            25 Years
+
+            <br>
+
+            <span class="italic">
+                of memories
+            </span>
+
+        </h2>
+
+
+        <p class="description">
+
+            From the beginning...
+
+            <br>
+
+            to everything you've built together.
+
+        </p>
+
+
+        <div class="memory-wrapper">
+
+
+            <div class="memory-image-container">
+
+                <img
+                    id="memoryImage"
+                    class="memory-image"
+                    src=""
+                    alt="Family memory">
+
+            </div>
+
 
             <div
-                class="container welcome-inner">
-
-                <div class="eyebrow">
-
-                    A little something for you
-
-                </div>
+                id="memoryCaption"
+                class="memory-caption">
+            </div>
 
 
-                <h1>
-
-                    25 Years
-
-                    <br>
-
-                    <span class="italic">
-                        & Still Counting
-                    </span>
-
-                </h1>
+            <div
+                id="memoryCounter"
+                class="memory-counter">
+            </div>
 
 
-                <div class="heart">
-
-                    ♡
-
-                </div>
-
-
-                <div class="subtitle">
-
-                    Happy 25th Wedding Anniversary,
-
-                    <br>
-
-                    Amma & Appa
-
-                </div>
-
-
-                <p class="description">
-
-                    25 years of memories,
-                    laughter, family,
-                    and a lifetime of moments together.
-
-                </p>
+            <div class="carousel-controls">
 
 
                 <button
-                    class="primary-btn"
-                    id="beginBtn">
+                    class="carousel-arrow"
+                    onclick="previousMemory()">
 
-                    Begin the journey →
-
-                </button>
-
-            </div>
-
-        </section>
-
-
-
-        <!-- =================================================
-             SCREEN 2 — MEMORIES
-        ================================================== -->
-
-        <section
-            id="screen-memories"
-            class="screen">
-
-            <div class="container">
-
-
-                <div class="eyebrow">
-
-                    Then → Now
-
-                </div>
-
-
-                <h2>
-
-                    25 Years
-
-                    <br>
-
-                    <span class="italic">
-                        & Still Counting
-                    </span>
-
-                </h2>
-
-
-                <p class="description">
-
-                    A few little moments
-                    from the journey so far...
-
-                </p>
-
-
-                <div class="memory-wrapper">
-
-
-                    <div
-                        class="memory-image-container">
-
-                        <img
-                            id="memoryImage"
-                            class="memory-image"
-                            src=""
-                            alt="A memory">
-
-                    </div>
-
-
-                    <div
-                        id="memoryCaption"
-                        class="memory-caption">
-                    </div>
-
-
-                    <div
-                        id="memoryCounter"
-                        class="memory-counter">
-                    </div>
-
-
-                    <div
-                        class="carousel-controls">
-
-
-                        <button
-                            class="carousel-arrow"
-                            id="previousBtn">
-
-                            ‹
-
-                        </button>
-
-
-                        <div
-                            id="dots"
-                            class="dots">
-                        </div>
-
-
-                        <button
-                            class="carousel-arrow"
-                            id="nextBtn">
-
-                            ›
-
-                        </button>
-
-
-                    </div>
-
-                </div>
-
-
-                <button
-                    class="primary-btn"
-                    id="planBtn">
-
-                    Plan the next adventure →
+                    ‹
 
                 </button>
-
-            </div>
-
-        </section>
-
-
-
-        <!-- =================================================
-             SCREEN 3 — DATE
-        ================================================== -->
-
-        <section
-            id="screen-date"
-            class="screen">
-
-            <div class="container">
-
-
-                <div class="eyebrow">
-
-                    One thing isn't cancelled
-
-                </div>
-
-
-                <h2>
-
-                    The outing
-
-                    <br>
-
-                    <span class="italic">
-                        is still happening.
-                    </span>
-
-                </h2>
-
-
-                <p class="description">
-
-                    Tomorrow didn't work out.
-
-                    <br>
-
-                    That's okay.
-
-                    <br><br>
-
-                    25 years deserve a proper celebration.
-                    Choose a day that works for both of you.
-
-                </p>
 
 
                 <div
-                    id="dateGrid"
-                    class="selection-grid">
+                    id="dots"
+                    class="dots">
                 </div>
 
 
                 <button
-                    id="dateContinue"
-                    class="primary-btn"
-                    disabled>
+                    class="carousel-arrow"
+                    onclick="nextMemory()">
 
-                    Choose a date
-
-                </button>
-
-            </div>
-
-        </section>
-
-
-
-        <!-- =================================================
-             SCREEN 4 — DESTINATION
-        ================================================== -->
-
-        <section
-            id="screen-destination"
-            class="screen">
-
-            <div class="container">
-
-
-                <div class="eyebrow">
-
-                    Last decision
-
-                </div>
-
-
-                <h2>
-
-                    Where are we
-
-                    <br>
-
-                    <span class="italic">
-                        going?
-                    </span>
-
-                </h2>
-
-
-                <p class="description">
-
-                    Choose what kind of
-                    anniversary outing you'd like.
-
-                </p>
-
-
-                <div
-                    id="destinationGrid"
-                    class="selection-grid">
-                </div>
-
-
-                <button
-                    id="destinationContinue"
-                    class="primary-btn"
-                    disabled>
-
-                    Choose a destination
+                    ›
 
                 </button>
 
-            </div>
-
-        </section>
-
-
-
-        <!-- =================================================
-             SCREEN 5 — FINAL
-        ================================================== -->
-
-        <section
-            id="screen-final"
-            class="screen">
-
-
-            <div class="container">
-
-
-                <div class="final-small">
-
-                    THE NEXT CHAPTER
-
-                </div>
-
-
-                <div class="final-title">
-
-                    It's a
-
-                    <br>
-
-                    <span class="italic">
-                        date.
-                    </span>
-
-                </div>
-
-
-                <div
-                    id="finalDate"
-                    class="final-date">
-                </div>
-
-
-                <div
-                    id="finalDestination"
-                    class="final-destination">
-                </div>
-
-
-                <div class="divider"></div>
-
-
-                <div class="final-message">
-
-                    25 years down.
-
-                    <br>
-
-                    Many more memories
-                    to make.
-
-                    <br>
-
-                    ❤️
-
-                </div>
-
-
-                <p class="description">
-
-                    Tomorrow may not have worked.
-
-                    <br>
-
-                    But the celebration isn't over.
-
-                </p>
-
-
-                <div class="signature">
-
-                    With love,
-
-                    <br>
-
-                    <strong>
-                        Your daughter
-                    </strong>
-
-                </div>
-
-
-                <button
-                    class="secondary-btn"
-                    id="backBtn">
-
-                    ↺ See the memories again
-
-                </button>
 
             </div>
 
-        </section>
+        </div>
 
 
-    </main>
+        <button
+            class="primary-btn"
+            onclick="showScreen('date')">
 
+            Plan the next adventure →
 
+        </button>
 
-    <!-- =====================================================
-         JAVASCRIPT
-    ====================================================== -->
+    </div>
 
-    <script>
+</section>
 
 
-        /* =================================================
-           1. YOUR PHOTOS
-        ================================================== */
 
+<!-- =========================================================
+     SCREEN 3 — DATE
+========================================================= -->
 
-        /*
-           Put your photos inside an "images" folder.
+<section
+    id="date"
+    class="screen">
 
-           Example:
+    <div class="container">
 
-           images/wedding.jpg
-           images/photo2.jpg
-           images/photo3.jpg
-           images/photo4.jpg
-           images/recent.jpg
 
-           Then change the names below if necessary.
-        */
+        <div class="eyebrow">
 
+            One thing isn't cancelled
 
-        const memories = [
+        </div>
 
-            {
-                image: "images/wedding.jpg",
-                caption: "And it all began..."
-            },
 
-            {
-                image: "images/photo2.jpg",
-                caption: "Two people. One journey."
-            },
+        <h2>
 
-            {
-                image: "images/photo3.jpg",
-                caption: "And then, a family."
-            },
+            The outing
 
-            {
-                image: "images/photo4.jpg",
-                caption: "A lot has happened since then. 😂"
-            },
+            <br>
 
-            {
-                image: "images/recent.jpg",
-                caption: "25 years later..."
-            }
+            <span class="italic">
+                is still happening.
+            </span>
 
-        ];
+        </h2>
 
 
+        <p class="description">
 
-        /* =================================================
-           2. AVAILABLE DATES
-        ================================================== */
+            Tomorrow didn't work out.
 
+            <br>
 
-        /*
-           CHANGE THESE.
+            Appa has work.
 
-           Only give them dates which are actually possible
-           for your dad.
-        */
+            <br><br>
 
+            But 25 years deserve a proper celebration.
 
-        const dates = [
+            <br>
 
-            {
-                day: "Saturday",
-                date: "5 September",
-                description:
-                    "A relaxed weekend date"
-            },
+            Pick a day that works for both of you.
 
-            {
-                day: "Sunday",
-                date: "6 September",
-                description:
-                    "A slow day together"
-            },
+        </p>
 
-            {
-                day: "Saturday",
-                date: "12 September",
-                description:
-                    "Another chance to escape"
-            },
 
-            {
-                day: "Sunday",
-                date: "13 September",
-                description:
-                    "A little anniversary adventure"
-            }
+        <div
+            id="dateGrid"
+            class="selection-grid">
+        </div>
 
-        ];
 
+        <button
+            id="dateButton"
+            class="primary-btn"
+            disabled
+            onclick="goToDestination()">
 
+            Choose a date
 
-        /* =================================================
-           3. DESTINATIONS
-        ================================================== */
+        </button>
 
+    </div>
 
-        /*
-           Replace these with REAL destinations.
+</section>
 
-           That's much better than generic choices.
 
-           Example:
 
-           {
-               icon: "🌊",
-               name: "Kanyakumari",
-               description: "Sea, sunset & dinner"
-           }
-        */
+<!-- =========================================================
+     SCREEN 4 — DESTINATION
+========================================================= -->
 
+<section
+    id="destination"
+    class="screen">
 
-        const destinations = [
+    <div class="container">
 
-            {
-                icon: "🌊",
-                name: "Beach Day",
-                description:
-                    "Sunset, sea & snacks"
-            },
 
-            {
-                icon: "🌿",
-                name: "Nature Escape",
-                description:
-                    "Fresh air & a peaceful day"
-            },
+        <div class="eyebrow">
 
-            {
-                icon: "🍽️",
-                name: "Dinner Date",
-                description:
-                    "Dress up. Eat well. Enjoy."
-            },
+            One last decision
 
-            {
-                icon: "🚗",
-                name: "Road Trip",
-                description:
-                    "Somewhere new, just because."
-            },
+        </div>
 
-            {
-                icon: "🎁",
-                name: "Surprise Me",
-                description:
-                    "You trust your daughter? Brave choice. 😂"
-            }
 
-        ];
+        <h2>
 
+            Where are we
 
+            <br>
 
-        /* =================================================
-           4. APPLICATION STATE
-        ================================================== */
+            <span class="italic">
+                going?
+            </span>
 
+        </h2>
 
-        let currentMemory = 0;
 
-        let selectedDate = null;
+        <p class="description">
 
-        let selectedDestination = null;
+            Pick the kind of day
+            you'd like to have together.
 
+        </p>
 
 
-        /* =================================================
-           5. DOM ELEMENTS
-        ================================================== */
+        <div
+            id="destinationGrid"
+            class="selection-grid">
+        </div>
 
 
-        const memoryImage =
-            document.getElementById(
-                "memoryImage"
-            );
+        <button
+            id="destinationButton"
+            class="primary-btn"
+            disabled
+            onclick="showFinal()">
 
+            Choose a destination
 
-        const memoryCaption =
-            document.getElementById(
-                "memoryCaption"
-            );
+        </button>
 
+    </div>
 
-        const memoryCounter =
-            document.getElementById(
-                "memoryCounter"
-            );
+</section>
 
 
-        const dots =
-            document.getElementById(
-                "dots"
-            );
 
+<!-- =========================================================
+     SCREEN 5 — FINAL
+========================================================= -->
 
-        const dateGrid =
-            document.getElementById(
-                "dateGrid"
-            );
+<section
+    id="final"
+    class="screen">
 
+    <div class="container">
 
-        const destinationGrid =
-            document.getElementById(
-                "destinationGrid"
-            );
 
+        <div class="final-small">
 
-        const dateContinue =
-            document.getElementById(
-                "dateContinue"
-            );
+            THE NEXT CHAPTER
 
+        </div>
 
-        const destinationContinue =
-            document.getElementById(
-                "destinationContinue"
-            );
 
+        <div class="final-title">
 
+            It's a
 
-        /* =================================================
-           6. SCREEN NAVIGATION
-        ================================================== */
+            <br>
 
+            <span class="italic">
+                date.
+            </span>
 
-        function goToScreen(screenId) {
+        </div>
 
 
-            document
-                .querySelectorAll(".screen")
-                .forEach(screen => {
+        <div
+            id="finalDate"
+            class="final-date">
+        </div>
 
-                    screen.classList.remove(
-                        "active"
-                    );
 
-                });
+        <div
+            id="finalDestination"
+            class="final-destination">
+        </div>
 
 
-            const target =
-                document.getElementById(
-                    screenId
-                );
+        <div class="divider"></div>
 
 
-            target.classList.add(
+        <div class="final-message">
+
+            25 years down.
+
+            <br>
+
+            Many more memories
+            to make.
+
+            <br>
+
+            ❤️
+
+        </div>
+
+
+        <p class="description">
+
+            Tomorrow may not have worked.
+
+            <br>
+
+            But the celebration isn't over.
+
+        </p>
+
+
+        <div class="signature">
+
+            Made with love,
+
+            <br>
+
+            <strong>
+                Your daughter
+            </strong>
+
+        </div>
+
+
+        <button
+            class="secondary-btn"
+            onclick="showScreen('memories')">
+
+            ↺ See the memories again
+
+        </button>
+
+    </div>
+
+</section>
+
+
+
+<script>
+
+/* =========================================================
+   PHOTOS
+
+   IMPORTANT:
+   These files remain on your device.
+
+   Change the filenames to match your actual photos.
+========================================================= */
+
+const memories = [
+
+    {
+        image: "images/wedding.jpg",
+        caption: "And it all began..."
+    },
+
+    {
+        image: "images/photo2.jpg",
+        caption: "Two people. One journey."
+    },
+
+    {
+        image: "images/photo3.jpg",
+        caption: "And then, a family."
+    },
+
+    {
+        image: "images/photo4.jpg",
+        caption: "A lot has happened since then. 😂"
+    },
+
+    {
+        image: "images/recent.jpg",
+        caption: "25 years later..."
+    }
+
+];
+
+
+/* =========================================================
+   DATES
+
+   CHANGE THESE TO REAL DATES YOUR DAD CAN TAKE OFF.
+========================================================= */
+
+const dates = [
+
+    {
+        day: "Saturday",
+        date: "5 September",
+        description:
+            "A relaxed weekend date"
+    },
+
+    {
+        day: "Sunday",
+        date: "6 September",
+        description:
+            "A slow day together"
+    },
+
+    {
+        day: "Saturday",
+        date: "12 September",
+        description:
+            "Another chance to escape"
+    },
+
+    {
+        day: "Sunday",
+        date: "13 September",
+        description:
+            "A little anniversary adventure"
+    }
+
+];
+
+
+/* =========================================================
+   DESTINATIONS
+
+   CHANGE THESE TO ACTUAL PLACES.
+========================================================= */
+
+const destinations = [
+
+    {
+        icon: "🌊",
+        name: "Beach Day",
+        description:
+            "Sea, sunset & snacks"
+    },
+
+    {
+        icon: "🌿",
+        name: "Nature Escape",
+        description:
+            "Fresh air & a peaceful day"
+    },
+
+    {
+        icon: "🍽️",
+        name: "Dinner Date",
+        description:
+            "Dress up. Eat well. Enjoy."
+    },
+
+    {
+        icon: "🚗",
+        name: "Road Trip",
+        description:
+            "Somewhere new, just because."
+    },
+
+    {
+        icon: "🎁",
+        name: "Surprise Me",
+        description:
+            "You trust your daughter? Brave choice. 😂"
+    }
+
+];
+
+
+/* =========================================================
+   VARIABLES
+========================================================= */
+
+let currentMemory = 0;
+
+let selectedDate = null;
+
+let selectedDestination = null;
+
+
+/* =========================================================
+   SCREEN NAVIGATION
+========================================================= */
+
+function showScreen(id) {
+
+
+    document
+        .querySelectorAll(".screen")
+        .forEach(screen => {
+
+            screen.classList.remove(
                 "active"
             );
 
-
-            window.scrollTo({
-                top: 0,
-                behavior: "smooth"
-            });
+        });
 
 
-            createFloatingHeart();
+    document
+        .getElementById(id)
+        .classList.add("active");
+
+
+    window.scrollTo(
+        0,
+        0
+    );
+
+
+    createFloatingHeart();
+
+}
+
+
+/* =========================================================
+   MEMORY CAROUSEL
+========================================================= */
+
+function setupCarousel() {
+
+
+    const dots =
+        document.getElementById(
+            "dots"
+        );
+
+
+    memories.forEach(
+        (memory, index) => {
+
+
+            const dot =
+                document.createElement(
+                    "span"
+                );
+
+
+            dot.className =
+                "dot";
+
+
+            dot.onclick =
+                () => showMemory(index);
+
+
+            dots.appendChild(dot);
 
         }
+    );
 
 
+    showMemory(0);
 
-        /* =================================================
-           7. MEMORY CAROUSEL
-        ================================================== */
-
-
-        function initialiseCarousel() {
+}
 
 
-            dots.innerHTML = "";
+function showMemory(index) {
 
 
-            memories.forEach(
-                (memory, index) => {
+    if (index < 0) {
+
+        index =
+            memories.length - 1;
+
+    }
 
 
-                    const dot =
-                        document.createElement(
-                            "span"
+    if (
+        index >= memories.length
+    ) {
+
+        index = 0;
+
+    }
+
+
+    currentMemory = index;
+
+
+    const image =
+        document.getElementById(
+            "memoryImage"
+        );
+
+
+    const caption =
+        document.getElementById(
+            "memoryCaption"
+        );
+
+
+    const counter =
+        document.getElementById(
+            "memoryCounter"
+        );
+
+
+    image.classList.add("fade");
+
+
+    setTimeout(
+        () => {
+
+
+            image.src =
+                memories[index].image;
+
+
+            caption.textContent =
+                memories[index].caption;
+
+
+            counter.textContent =
+                `${index + 1} / ${memories.length}`;
+
+
+            document
+                .querySelectorAll(".dot")
+                .forEach(
+                    (dot, i) => {
+
+                        dot.classList.toggle(
+                            "active",
+                            i === index
                         );
 
+                    }
+                );
 
-                    dot.className =
-                        "dot";
 
+            image.onload =
+                () => {
 
-                    dot.addEventListener(
-                        "click",
-                        () => {
-
-                            showMemory(index);
-
-                        }
+                    image.classList.remove(
+                        "fade"
                     );
 
+                };
 
-                    dots.appendChild(dot);
 
-                }
-            );
+        },
+        250
+    );
 
+}
 
-            showMemory(0);
 
-        }
+function nextMemory() {
 
+    showMemory(
+        currentMemory + 1
+    );
 
+}
 
-        function showMemory(index) {
 
+function previousMemory() {
 
-            if (
-                index < 0
-            ) {
+    showMemory(
+        currentMemory - 1
+    );
 
-                index =
-                    memories.length - 1;
+}
 
-            }
 
+/* =========================================================
+   DATE OPTIONS
+========================================================= */
 
-            if (
-                index >= memories.length
-            ) {
+function setupDates() {
 
-                index = 0;
 
-            }
+    const grid =
+        document.getElementById(
+            "dateGrid"
+        );
 
 
-            currentMemory = index;
+    dates.forEach(
+        item => {
 
 
-            memoryImage.classList.add(
-                "fade"
-            );
+            const card =
+                document.createElement(
+                    "button"
+                );
 
 
-            setTimeout(() => {
+            card.className =
+                "selection-card";
 
 
-                memoryImage.src =
-                    memories[index].image;
+            card.innerHTML = `
 
+                <div class="card-top">
 
-                memoryCaption.textContent =
-                    memories[index].caption;
+                    <div>
 
-
-                memoryCounter.textContent =
-                    `${index + 1} / ${memories.length}`;
-
-
-                document
-                    .querySelectorAll(
-                        ".dot"
-                    )
-                    .forEach(
-                        (dot, dotIndex) => {
-
-                            dot.classList.toggle(
-                                "active",
-                                dotIndex === index
-                            );
-
-                        }
-                    );
-
-
-                memoryImage.onload =
-                    () => {
-
-                        memoryImage.classList.remove(
-                            "fade"
-                        );
-
-                    };
-
-
-            }, 250);
-
-        }
-
-
-
-        function nextMemory() {
-
-            showMemory(
-                currentMemory + 1
-            );
-
-        }
-
-
-
-        function previousMemory() {
-
-            showMemory(
-                currentMemory - 1
-            );
-
-        }
-
-
-
-        /* =================================================
-           8. DATE CARDS
-        ================================================== */
-
-
-        function createDateCards() {
-
-
-            dates.forEach(
-                (item) => {
-
-
-                    const card =
-                        document.createElement(
-                            "button"
-                        );
-
-
-                    card.className =
-                        "selection-card";
-
-
-                    card.innerHTML = `
-
-                        <div class="card-top">
-
-                            <div>
-
-                                <div class="day">
-                                    ${item.day}
-                                </div>
-
-                                <div class="date">
-                                    ${item.date}
-                                </div>
-
-                                <div class="card-description">
-                                    ${item.description}
-                                </div>
-
-                            </div>
-
-                            <div class="check">
-                                ✓
-                            </div>
-
+                        <div class="day">
+                            ${item.day}
                         </div>
 
-                    `;
+                        <div class="date">
+                            ${item.date}
+                        </div>
+
+                        <div class="card-description">
+                            ${item.description}
+                        </div>
+
+                    </div>
+
+                    <div class="check">
+                        ✓
+                    </div>
+
+                </div>
+
+            `;
 
 
-                    card.addEventListener(
-                        "click",
-                        () => {
+            card.onclick =
+                () => {
 
 
-                            document
-                                .querySelectorAll(
-                                    "#dateGrid .selection-card"
-                                )
-                                .forEach(
-                                    otherCard => {
+                    document
+                        .querySelectorAll(
+                            "#dateGrid .selection-card"
+                        )
+                        .forEach(
+                            other => {
 
-                                        otherCard.classList.remove(
-                                            "selected"
-                                        );
-
-                                    }
+                                other.classList.remove(
+                                    "selected"
                                 );
 
-
-                            card.classList.add(
-                                "selected"
-                            );
-
-
-                            selectedDate =
-                                item;
-
-
-                            dateContinue.disabled =
-                                false;
-
-
-                            dateContinue.textContent =
-                                "Continue →";
-
-                        }
-                    );
-
-
-                    dateGrid.appendChild(
-                        card
-                    );
-
-                }
-            );
-
-        }
-
-
-
-        /* =================================================
-           9. DESTINATION CARDS
-        ================================================== */
-
-
-        function createDestinationCards() {
-
-
-            destinations.forEach(
-                (item) => {
-
-
-                    const card =
-                        document.createElement(
-                            "button"
+                            }
                         );
 
 
-                    card.className =
-                        "selection-card destination-card";
-
-
-                    card.innerHTML = `
-
-                        <div class="destination-icon">
-                            ${item.icon}
-                        </div>
-
-                        <div class="destination-info">
-
-                            <div class="destination-name">
-                                ${item.name}
-                            </div>
-
-                            <div class="card-description">
-                                ${item.description}
-                            </div>
-
-                        </div>
-
-                        <div class="check">
-                            ✓
-                        </div>
-
-                    `;
-
-
-                    card.addEventListener(
-                        "click",
-                        () => {
-
-
-                            document
-                                .querySelectorAll(
-                                    "#destinationGrid .selection-card"
-                                )
-                                .forEach(
-                                    otherCard => {
-
-                                        otherCard.classList.remove(
-                                            "selected"
-                                        );
-
-                                    }
-                                );
-
-
-                            card.classList.add(
-                                "selected"
-                            );
-
-
-                            selectedDestination =
-                                item;
-
-
-                            destinationContinue.disabled =
-                                false;
-
-
-                            destinationContinue.textContent =
-                                "Reveal the plan →";
-
-                        }
+                    card.classList.add(
+                        "selected"
                     );
 
 
-                    destinationGrid.appendChild(
-                        card
-                    );
+                    selectedDate =
+                        item;
 
-                }
+
+                    const button =
+                        document.getElementById(
+                            "dateButton"
+                        );
+
+
+                    button.disabled =
+                        false;
+
+
+                    button.textContent =
+                        "Continue →";
+
+                };
+
+
+            grid.appendChild(
+                card
             );
 
         }
+    );
+
+}
 
 
+/* =========================================================
+   DESTINATION OPTIONS
+========================================================= */
 
-        /* =================================================
-           10. FINAL SCREEN
-        ================================================== */
+function setupDestinations() {
 
 
-        function showFinalScreen() {
+    const grid =
+        document.getElementById(
+            "destinationGrid"
+        );
+
+
+    destinations.forEach(
+        item => {
+
+
+            const card =
+                document.createElement(
+                    "button"
+                );
+
+
+            card.className =
+                "selection-card destination-card";
+
+
+            card.innerHTML = `
+
+                <div class="destination-icon">
+
+                    ${item.icon}
+
+                </div>
+
+                <div class="destination-info">
+
+                    <div class="destination-name">
+
+                        ${item.name}
+
+                    </div>
+
+                    <div class="card-description">
+
+                        ${item.description}
+
+                    </div>
+
+                </div>
+
+                <div class="check">
+
+                    ✓
+
+                </div>
+
+            `;
+
+
+            card.onclick =
+                () => {
+
+
+                    document
+                        .querySelectorAll(
+                            "#destinationGrid .selection-card"
+                        )
+                        .forEach(
+                            other => {
+
+                                other.classList.remove(
+                                    "selected"
+                                );
+
+                            }
+                        );
+
+
+                    card.classList.add(
+                        "selected"
+                    );
+
+
+                    selectedDestination =
+                        item;
+
+
+                    const button =
+                        document.getElementById(
+                            "destinationButton"
+                        );
+
+
+                    button.disabled =
+                        false;
+
+
+                    button.textContent =
+                        "Reveal the plan →";
+
+                };
+
+
+            grid.appendChild(
+                card
+            );
+
+        }
+    );
+
+}
+
+
+/* =========================================================
+   MOVE TO DESTINATION
+========================================================= */
+
+function goToDestination() {
+
+
+    if (!selectedDate) {
+
+        return;
+
+    }
+
+
+    showScreen(
+        "destination"
+    );
+
+}
+
+
+/* =========================================================
+   FINAL SCREEN
+========================================================= */
+
+function showFinal() {
+
+
+    if (
+        !selectedDate ||
+        !selectedDestination
+    ) {
+
+        return;
+
+    }
+
+
+    document.getElementById(
+        "finalDate"
+    ).textContent =
+
+        `${selectedDate.day}, ${selectedDate.date}`;
+
+
+    document.getElementById(
+        "finalDestination"
+    ).textContent =
+
+        `${selectedDestination.icon} ${selectedDestination.name}`;
+
+
+    showScreen(
+        "final"
+    );
+
+
+    setTimeout(
+        launchConfetti,
+        400
+    );
+
+}
+
+
+/* =========================================================
+   FLOATING HEART
+========================================================= */
+
+function createFloatingHeart() {
+
+
+    const heart =
+        document.createElement(
+            "div"
+        );
+
+
+    heart.className =
+        "floating-heart";
+
+
+    heart.textContent =
+        "♡";
+
+
+    heart.style.left =
+        Math.random() *
+        100 +
+        "vw";
+
+
+    heart.style.fontSize =
+        (
+            15 +
+            Math.random() * 15
+        ) +
+        "px";
+
+
+    document.body.appendChild(
+        heart
+    );
+
+
+    setTimeout(
+        () => {
+
+            heart.remove();
+
+        },
+        7000
+    );
+
+}
+
+
+/* =========================================================
+   CONFETTI
+========================================================= */
+
+function launchConfetti() {
+
+
+    const colors = [
+
+        "#873b47",
+        "#b79a5a",
+        "#e3d8ce",
+        "#302824"
+
+    ];
+
+
+    for (
+        let i = 0;
+        i < 80;
+        i++
+    ) {
+
+
+        const piece =
+            document.createElement(
+                "div"
+            );
+
+
+        piece.className =
+            "confetti";
+
+
+        piece.style.background =
+            colors[
+                Math.floor(
+                    Math.random() *
+                    colors.length
+                )
+            ];
+
+
+        piece.style.left =
+            Math.random() *
+            100 +
+            "vw";
+
+
+        piece.style.animationDuration =
+            (
+                3 +
+                Math.random() * 4
+            ) +
+            "s";
+
+
+        piece.style.animationDelay =
+            Math.random() *
+            0.5 +
+            "s";
+
+
+        document.body.appendChild(
+            piece
+        );
+
+
+        setTimeout(
+            () => {
+
+                piece.remove();
+
+            },
+            8000
+        );
+
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE PHOTO SWIPE
+========================================================= */
+
+let touchStartX = 0;
+
+
+document
+    .getElementById(
+        "memoryImage"
+    )
+    .addEventListener(
+        "touchstart",
+        event => {
+
+            touchStartX =
+                event.touches[0].clientX;
+
+        },
+        {
+            passive: true
+        }
+    );
+
+
+document
+    .getElementById(
+        "memoryImage"
+    )
+    .addEventListener(
+        "touchend",
+        event => {
+
+
+            const touchEndX =
+                event.changedTouches[0].clientX;
+
+
+            const difference =
+                touchStartX -
+                touchEndX;
 
 
             if (
-                !selectedDate ||
-                !selectedDestination
+                Math.abs(difference) < 50
             ) {
 
                 return;
@@ -2179,361 +2136,37 @@
             }
 
 
-            document.getElementById(
-                "finalDate"
-            ).textContent =
-
-                `${selectedDate.day}, ${selectedDate.date}`;
-
-
-            document.getElementById(
-                "finalDestination"
-            ).textContent =
-
-                `${selectedDestination.icon} ${selectedDestination.name}`;
-
-
-            goToScreen(
-                "screen-final"
-            );
-
-
-            setTimeout(
-                launchConfetti,
-                500
-            );
-
-        }
-
-
-
-        /* =================================================
-           11. CONFETTI
-        ================================================== */
-
-
-        function launchConfetti() {
-
-
-            const numberOfPieces = 90;
-
-
-            const colors = [
-
-                "#873b47",
-
-                "#b79a5a",
-
-                "#e3d8ce",
-
-                "#302824"
-
-            ];
-
-
-            for (
-                let i = 0;
-                i < numberOfPieces;
-                i++
+            if (
+                difference > 0
             ) {
 
+                nextMemory();
 
-                const piece =
-                    document.createElement(
-                        "div"
-                    );
+            } else {
 
-
-                piece.className =
-                    "confetti";
-
-
-                piece.style.background =
-                    colors[
-                        Math.floor(
-                            Math.random() *
-                            colors.length
-                        )
-                    ];
-
-
-                piece.style.left =
-                    Math.random() *
-                    100 +
-                    "vw";
-
-
-                piece.style.animationDuration =
-                    (
-                        3 +
-                        Math.random() * 4
-                    ) +
-                    "s";
-
-
-                piece.style.animationDelay =
-                    Math.random() *
-                    0.8 +
-                    "s";
-
-
-                piece.style.transform =
-                    `rotate(
-                        ${Math.random() * 360}deg
-                    )`;
-
-
-                document.body.appendChild(
-                    piece
-                );
-
-
-                setTimeout(
-                    () => {
-
-                        piece.remove();
-
-                    },
-                    8000
-                );
+                previousMemory();
 
             }
 
+        },
+        {
+            passive: true
         }
+    );
 
 
+/* =========================================================
+   INITIALISE
+========================================================= */
 
-        /* =================================================
-           12. FLOATING HEART
-        ================================================== */
+setupCarousel();
 
+setupDates();
 
-        function createFloatingHeart() {
+setupDestinations();
 
+</script>
 
-            const heart =
-                document.createElement(
-                    "div"
-                );
-
-
-            heart.className =
-                "floating-heart";
-
-
-            heart.textContent =
-                "♡";
-
-
-            heart.style.left =
-                Math.random() *
-                100 +
-                "vw";
-
-
-            heart.style.fontSize =
-                (
-                    15 +
-                    Math.random() * 15
-                ) +
-                "px";
-
-
-            heart.style.animationDuration =
-                (
-                    5 +
-                    Math.random() * 4
-                ) +
-                "s";
-
-
-            document.body.appendChild(
-                heart
-            );
-
-
-            setTimeout(
-                () => {
-
-                    heart.remove();
-
-                },
-                9000
-            );
-
-        }
-
-
-
-        /* =================================================
-           13. BUTTON EVENTS
-        ================================================== */
-
-
-        document
-            .getElementById("beginBtn")
-            .addEventListener(
-                "click",
-                () => {
-
-                    goToScreen(
-                        "screen-memories"
-                    );
-
-                }
-            );
-
-
-        document
-            .getElementById("planBtn")
-            .addEventListener(
-                "click",
-                () => {
-
-                    goToScreen(
-                        "screen-date"
-                    );
-
-                }
-            );
-
-
-        document
-            .getElementById("previousBtn")
-            .addEventListener(
-                "click",
-                previousMemory
-            );
-
-
-        document
-            .getElementById("nextBtn")
-            .addEventListener(
-                "click",
-                nextMemory
-            );
-
-
-        dateContinue
-            .addEventListener(
-                "click",
-                () => {
-
-                    if (!selectedDate) {
-
-                        return;
-
-                    }
-
-
-                    goToScreen(
-                        "screen-destination"
-                    );
-
-                }
-            );
-
-
-        destinationContinue
-            .addEventListener(
-                "click",
-                showFinalScreen
-            );
-
-
-        document
-            .getElementById("backBtn")
-            .addEventListener(
-                "click",
-                () => {
-
-                    goToScreen(
-                        "screen-memories"
-                    );
-
-                }
-            );
-
-
-
-        /* =================================================
-           14. MOBILE SWIPE
-        ================================================== */
-
-
-        let touchStartX = 0;
-
-
-        memoryImage.addEventListener(
-            "touchstart",
-            event => {
-
-                touchStartX =
-                    event.touches[0].clientX;
-
-            },
-            {
-                passive: true
-            }
-        );
-
-
-        memoryImage.addEventListener(
-            "touchend",
-            event => {
-
-
-                const touchEndX =
-                    event.changedTouches[0].clientX;
-
-
-                const difference =
-                    touchStartX -
-                    touchEndX;
-
-
-                if (
-                    Math.abs(difference) < 50
-                ) {
-
-                    return;
-
-                }
-
-
-                if (
-                    difference > 0
-                ) {
-
-                    nextMemory();
-
-                } else {
-
-                    previousMemory();
-
-                }
-
-            },
-            {
-                passive: true
-            }
-        );
-
-
-
-        /* =================================================
-           15. START
-        ================================================== */
-
-
-        initialiseCarousel();
-
-        createDateCards();
-
-        createDestinationCards();
-
-
-    </script>
 
 </body>
 
